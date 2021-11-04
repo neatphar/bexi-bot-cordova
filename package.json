@@ -21,10 +21,10 @@
   },
   "cordova": {
     "plugins": {
+      "cordova-sms-plugin": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-speechrecognition": {},
       "cordova-plugin-tts": {},
-      "cordova-sms-plugin": {}
+      "cordova-plugin-speechrecognition": {}
     },
     "platforms": [
       "android"
