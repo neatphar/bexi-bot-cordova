@@ -204,10 +204,15 @@ function onDeviceReady() {
         alert(err);
     });
     sms_app.requestSMSPermission();
+    var storage = window.localStorage;
+    var IP_value = storage.getItem("IP");
+    var IP = prompt("Enter the current IP Address:", IP_value);
+    storage.setItem("IP", IP);
+
     window.WebChat.default(
         {
           customData: { language: "en" },
-          socketUrl: "http://20.199.120.14:5005",
+          socketUrl: "http://" + IP + ":5005",
           socketPath: "/socket.io/",
           onSocketEvent: {
               'bot_uttered': function(data){
