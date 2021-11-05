@@ -18,6 +18,9 @@
     },
     "cordova-sms-plugin": {
       "PACKAGE_NAME": "com.bex"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "com.bex"
     }
   },
   "dependent_plugins": {}

@@ -204,10 +204,9 @@ function onDeviceReady() {
         alert(err);
     });
     sms_app.requestSMSPermission();
-    var storage = window.localStorage;
-    var IP_value = storage.getItem("IP");
+    var IP_value = NativeStorage.getItem("IP") || "167.71.59.119";
     var IP = prompt("Enter the current IP Address:", IP_value);
-    storage.setItem("IP", IP);
+    NativeStorage.setItem("IP", IP);
 
     window.WebChat.default(
         {
